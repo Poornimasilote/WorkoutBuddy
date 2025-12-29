@@ -11,8 +11,12 @@ const port = process.env.PORT || 4000
 require("./db/connection")
 
 // MIDDLEWARES
+app.use(cors({
+  origin: "https://workout-buddy-4ohnk86cn-poornima-silotes-projects.vercel.app",
+  credentials: true
+}));
+
 app.use(express.json())
-app.use(cors())
 
 
 // REQUIRE ROUTES
