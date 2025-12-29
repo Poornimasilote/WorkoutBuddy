@@ -18,7 +18,7 @@ const Form = () => {
 
   const createWorkout = async (e) => {
     e.preventDefault();
-    const response = await axios.post("http://localhost:4000/api/workouts", form,
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/workouts`, form,
       {
             headers:{
                 "Authorization": `Bearer ${user.token}`
@@ -45,7 +45,7 @@ const Form = () => {
   const updateWorkout = async (e) => {
     e.preventDefault();
     const { _id, title, reps, load } = updateForm;
-    await axios.patch(`http://localhost:4000/api/workouts/${_id}`, { title, reps, load },
+    await axios.patch(`${import.meta.env.VITE_API_URL}/api/workouts/${_id}`, { title, reps, load },
        {
             headers:{
                 "Authorization": `Bearer ${user.token}`

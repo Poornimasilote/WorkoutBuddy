@@ -13,7 +13,7 @@ const WorkoutContext = ({ children }) => {
 
     // Get request function
     const getWorkouts = async () => {
-        const response = await axios.get("http://localhost:4000/api/workouts",{
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/workouts`,{
             headers:{
                 "Authorization": `Bearer ${user.token}`
             }
@@ -31,7 +31,7 @@ const WorkoutContext = ({ children }) => {
 
     // delete request
     const deleteWorkout = async (_id) => {
-        await axios.delete(`http://localhost:4000/api/workouts/${_id}`,
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/workouts${_id}`,
              {
             headers:{
                 "Authorization": `Bearer ${user.token}`
