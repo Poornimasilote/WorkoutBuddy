@@ -1,0 +1,100 @@
+/* Container for records list */
+.records-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual card */
+.record-card {
+  width: 100%;
+  background-color: #ffffff;
+
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+
+  padding: 22px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.record-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Header */
+.record-header h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Body */
+.record-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.record-body p {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+}
+
+.record-body span {
+  font-weight: 500;
+  color: #777;
+}
+
+/* Buttons */
+/* Buttons container */
+.btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons (content-fit) */
+.btn {
+  padding: 8px 14px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  background-color: #f5f5f5;
+  color: #111;
+
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background-color: #eaeaea;
+  transform: translateY(-1px);
+}
+
+/* Edit button */
+.btn.edit {
+  border: 1px solid #e0e0e0;
+}
+
+/* Delete button */
+.btn.delete {
+  background-color: #ffffff;
+  color: #d11a2a;
+  border: 1px solid #f0c7cb;
+}
+
+.btn.delete:hover {
+  background-color: #fdecee;
+}

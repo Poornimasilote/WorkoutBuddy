@@ -1,0 +1,135 @@
+/* ==============================
+   Global Reset
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Navbar Container
+================================ */
+.navbar {
+  height: 70px;
+  padding: 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* ==============================
+   Logo
+================================ */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+/* ==============================
+   Menu (Login / Signup)
+================================ */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Nav Links */
+.nav-link {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+
+  padding: 6px 0;
+  position: relative;
+
+  transition: color 0.2s ease;
+}
+
+/* Subtle underline hover */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #111;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #111;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==============================
+   Logged-in User Section
+================================ */
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* User email / name */
+.logout span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+
+  background-color: #f6f6f6;
+  padding: 6px 14px;
+  border-radius: 20px;
+  line-height: 1;
+}
+
+/* Logout Button */
+.logout button {
+  background-color: transparent;
+  border: 1px solid #111;
+  color: #111;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.logout button:hover {
+  background-color: #111;
+  color: #ffffff;
+}
+
+/* ==============================
+   Mobile Responsive
+================================ */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 24px;
+  }
+
+  .menu {
+    gap: 18px;
+  }
+
+  .logout span {
+    display: none;
+  }
+}

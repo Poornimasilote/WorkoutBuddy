@@ -1,0 +1,85 @@
+/* Form wrapper */
+form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 28px 30px;
+
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Form heading */
+form h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+/* Labels */
+form label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Inputs */
+form input {
+  width: 100%;
+  padding: 10px 12px;
+
+  font-size: 0.9rem;
+  color: #111;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove <br /> spacing effect visually */
+form br {
+  display: none;
+}
+
+/* Submit / Update button */
+form button {
+  margin-top: 14px;
+  padding: 12px 0;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  background-color: #111;
+  color: #fff;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+form button:hover {
+  background-color: #000;
+  transform: translateY(-1px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  form {
+    margin: 24px 16px;
+    padding: 24px;
+  }
+}
